@@ -1,0 +1,334 @@
+DAILY SCRUM at 8:30AM EVERYDAY
+==============================
+
+27/03/2020 Jessica:
+First Scrum:
+**what was done since last scrum**
+
+1.To do until next scrum:
+- Create a parallax background
+- Decide on Assets
+
+2. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+27/03/2020 Gabriel:
+First Scrum:
+**what was done since last scrum**
+
+1.To do until next scrum:
+- Figure out Camera Movement locked on Player
+- Figure out if the gitignore is good
+- Decide on Assets
+
+2. Need Assistance:
+- N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+28/03/2020 Jessica:
+
+1. What was done since last scrum:
+- parallax background almost complete
+- assets decided on:
+	* Sunny Land Forest for tester
+	* Sunny Land for main assets, GothicVania for enemy assets for final project
+
+2. To do until next scrum:
+- do more research on git for unity (or decide if a .gitignore for unity is enough)
+- focus on player movement and attack
+- ~possibly~ add enemy attack
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+28/03/2020 Gabriel:
+
+1. What was done since last scrum:
+- assets decided on:
+	* Some Player Animations for tester
+	* Sunny Land for main assets, GothicVania for enemy assets for final project
+
+2. To do until next scrum:
+- learn about Tilemaps, Player Movement, Animations
+
+3. Need Assistance:
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+29/03/2020 Jessica:
+
+1. What was done since last scrum:
+- parallax background completed
+- assets decided on:
+	* Sunny Land Forest for tester
+	* Sunny Land for main assets, GothicVania for enemy assets for final project
+
+2. To do until next scrum:
+- do more research on git for unity (or decide if a .gitignore for unity is enough)
+- focus on player movement and attack
+- ~possibly~ add enemy attack
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+29/03/2020 Gabriel:
+
+1. What was done since last scrum:
+- assets decided on:
+	* Some Player Movement for tester
+	* Some Player Animations for tester
+	* Sunny Land for main assets, GothicVania for enemy assets for final project
+
+2. To do until next scrum:
+- learn about Enemy AI
+
+3. Need Assistance:
+- Multiple Tilemaps (layered), properly adding colliders to terrain
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+30/03/2020 Jessica:
+
+1. What was done since last scrum:
+- studied for test, did not work on game
+
+2. To do until next scrum:
+- do more research on git for unity (linked directly to unity application)
+- focus on player movement and attack
+- ~possibly~ add enemy attack
+
+
+3. Need Assistance:
+- editing the tile pallette
+
+-----------------------------------------------------------------------------------------------------
+
+30/03/2020 Gabriel:
+
+1. What was done since last scrum:
+Learn more on enemy ai, learn about projectiles anim and physics
+
+2. To do until next scrum:
+Figure out using unity with github
+
+3. Need Assistance:
+tilemap editing
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+31/03/2020 Jessica:
+
+1. What was done since last scrum:
+- added tilemap to tester game
+
+2. To do until next scrum:
+- add colliders to tilemap
+- focus on player movement and attack
+- ~possibly~ add enemy attack
+
+3. Need Assistance:
+- tilemap edtiting (moving sprites around tile palette)
+
+-----------------------------------------------------------------------------------------------------
+
+31/03/2020 Gabriel:
+
+1. What was done since last scrum:
+Figured out unity with github
+
+2. To do until next scrum:
+practice enemy movement and hitboxes
+
+3. Need Assistance:
+tilemap editing
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+01/04/2020 Jessica:
+
+1. What was done since last scrum:
+- added git for unity to unity and created a repository inside of unity
+- added colliders to tilemap
+
+2. To do until next scrum:
+- add movement and camera focus to character/player
+- add animations for character and enemy movement
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+01/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Some enemies animation, look at how to make a menu screen
+
+2. To do until next scrum:
+Create a Demo Scene, where player vs ai can happen
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+02/04/2020 Jessica:
+
+1. What was done since last scrum:
+- added animations for character movement
+
+
+2. To do until next scrum:
+- camera focus to character/player
+- add animations for enemy movement
+
+
+3. Need Assistance:
+- colliders for character movement
+
+-----------------------------------------------------------------------------------------------------
+
+02/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Demo scene worked on, needs fixing
+
+2. To do until next scrum:
+finish demo scene, fix interaction and movement issues
+
+3. Need Assistance:
+crouch not working
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+03/04/2020 Jessica:
+
+1. What was done since last scrum:
+- linked all character movement to the character animations
+- created another git repository and added the tilemap created
+
+
+2. To do until next scrum:
+- camera focus to character/player
+- add animations for enemy movement
+
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+03/04/2020 Gabriel:
+
+1. What was done since last scrum:
+- Kept working demo
+
+2. To do until next scrum:
+Start putting what we've worked on together
+kep working on player move
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+04/04/2020 Jessica:
+
+1. What was done since last scrum:
+- N/A
+
+
+2. To do until next scrum:
+- camera focus to character/player
+- add animations for enemy movement
+
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+04/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Trying to fix player movements and animations
+
+2. To do until next scrum:
+- Study for class today
+
+3. Need Assistance:
+Character movement not great, jump not perfect, crouch not perfect
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+05/04/2020 Jessica:
+
+1. What was done since last scrum:
+- working on refining character animation (had trouble between fall, jump, and idle/skip animations)
+
+2. To do until next scrum:
+- camera focus to character/player
+- add animations for enemy movement
+- add climbable surfaces
+
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+05/04/2020 Gabriel:
+
+1. What was done since last scrum:
+- nothing, studied for class
+
+2. To do until next scrum:
+- Create Menu scene, learn scene transitions
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+06/04/2020 Jessica:
+
+1. What was done since last scrum:
+- completely re-wrote script for character movement (fall, jump, idle, and skip animations are all working)
+- started to add climbable surfaces (ladders)
+
+
+2. To do until next scrum:
+- camera focus to character/player
+- add animations for enemy movement
+- add climbable surfaces
+
+3. Need Assistance:
+- N/A
+
+-----------------------------------------------------------------------------------------------------
+
+06/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Menu Scene created, transitions well -> "build settings" for game
+
+2. To do until next scrum:
+Add character selection in menu? or potentially switch characters in game
+Finish player movement and animation today
+
+3. Need Assistance:
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
