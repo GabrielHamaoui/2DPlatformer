@@ -9,13 +9,18 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer spriteRend;
 
-    private float speed = 7.0f;
-
-
-    bool isGrounded;
+    [SerializeField]
+    private float speed = 8f;
 
     [SerializeField]
-    Transform groundCheck;
+    private float jumpVelocity = 8f;
+
+
+    [SerializeField]
+    private LayerMask groundLayerMask;
+
+    private CircleCollider2D circleCollider2D;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,62 +28,96 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRend = GetComponent<SpriteRenderer>();
-
+        circleCollider2D = transform.GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        /*
+       var currentheight = transform.position.y;
+
+
+        var travel = currentheight - previousheight;
+
+
+
+       var  previousheight = currentheight;
+       */
     }
 
+    // regarding animationss
+    private void LateUpdate()
+    {
+        // JUMP
+        if ((IsGrounded() && Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()))
+        {
+            animator.SetTrigger("takeOf");
+        }
+        if (rb.velocity.y < 0)
+        {
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            animator.SetBool("isFalling", false);
+            
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        float extraHeight = 0.01f;
+        RaycastHit2D rayCastHit = Physics2D.CircleCast(circleCollider2D.bounds.center, 0.45f /*radius*/, Vector2.down, circleCollider2D.bounds.extents.y + extraHeight, groundLayerMask);
+        Color rayColor;
+        if (rayCastHit.collider != null)
+        {
+            rayColor = Color.green;
+        } else
+        {
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(circleCollider2D.bounds.center, Vector2.down * (circleCollider2D.bounds.extents.y + extraHeight), rayColor);
+        Debug.Log(rayCastHit.collider);
+        return rayCastHit.collider != null;
+    }
 
     // fixed timesteps and more accurate for physics
     private void FixedUpdate()
     {
-        if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
-        {
-            isGrounded = true;
-        } else 
-        {
-            isGrounded = false;
-        }
 
 
-        if (Input.GetKey("d") || Input.GetKey("right"))
+        // LEFT, RIGHT & IDLE
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-            animator.Play("Player_Run");
-            spriteRend.flipX = false;
-        } else if (Input.GetKey("a") || Input.GetKey("left"))
-        {
+
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             animator.Play("Player_Run");
             spriteRend.flipX = true;
-        } else
+
+        } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            //if (isGrounded == false)
-            //{
-            //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
-            //}
+
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+            animator.Play("Player_Run");
+            spriteRend.flipX = false;
+
+        } else
+        {            
+
             animator.Play("Player_Idle");
             rb.velocity = new Vector2(0, rb.velocity.y);
+
         }
 
-
-        if (Input.GetKey("space"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 4);
-            if (rb.velocity.y > 0.1)
-            {
-                animator.Play("Player_Jump_Up");
-            }
-            if (rb.velocity.y < -0.1)
-            {
-                animator.Play("Player_Jump_Down");
-            }
+        // JUMP
+        if ((IsGrounded() && Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()))
+        {            
+            rb.velocity = Vector2.up * jumpVelocity;
+            // animator.SetTrigger("takeOf");
         }
 
+       
 
     }
 
