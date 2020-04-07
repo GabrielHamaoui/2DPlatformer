@@ -332,3 +332,58 @@ Finish player movement and animation today
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+07/04/2020 Jessica:
+
+1. What was done since last scrum:
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+
+
+-----------------------------------------------------------------------------------------------------
+
+07/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Fixed Grounded issues, fixed some movement, 
+watched tutorials on player selection menu and saving objects going through game
+
+2. To do until next scrum:
+Fine tune movement and animations
+Start the creation of a Character Selection Menu 
+
+3. Need Assistance:
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+08/04/2020 Jessica:
+
+1. What was done since last scrum:
+
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+
+
+-----------------------------------------------------------------------------------------------------
+
+08/04/2020 Gabriel:
+
+1. What was done since last scrum:
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
