@@ -336,13 +336,16 @@ Finish player movement and animation today
 07/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+- added climbable surfaces
+- added camera focus to character/player
 
 2. To do until next scrum:
-
+- add animations for enemy movement
+- implement duck for player
+- possibly add enemy attack
 
 3. Need Assistance:
-
+- N/A
 
 -----------------------------------------------------------------------------------------------------
 
