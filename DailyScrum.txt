@@ -367,14 +367,18 @@ Start the creation of a Character Selection Menu
 08/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+- implemented duck for player
+- added animations for enemy movement
 
 
 2. To do until next scrum:
-
+- add enemy attack
+- add enemy death
+- add health bar for player character
+- create a few levels and push to repository
 
 3. Need Assistance:
-
+- N/A
 
 -----------------------------------------------------------------------------------------------------
 
