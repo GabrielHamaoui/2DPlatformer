@@ -5,13 +5,18 @@ using UnityEngine;
 public class GetMainChar : MonoBehaviour
 {
 
-    public Sprite squirel, bunny;
-    private SpriteRenderer mySprite;
+    public GameObject squirel, bunny;
+    private Vector2 initialPosition;
+    private Vector2 offScreenPos;
+    private SpriteRenderer bunnyRend, squirelRend;
     private readonly string selectedCharacter = "SelectedCharacter";
 
     private void Awake()
     {
-        mySprite = this.GetComponent<SpriteRenderer>();
+        initialPosition = this.transform.position;
+        offScreenPos = squirel.transform.position;
+        bunnyRend = bunny.GetComponent<SpriteRenderer>();
+        squirelRend = squirel.GetComponent<SpriteRenderer>();
     }
 
 
@@ -24,10 +29,16 @@ public class GetMainChar : MonoBehaviour
         switch(getCharacter)
         {
             case 1:
-                //mySprite.gameObject = squirel;
+                squirel.transform.position = offScreenPos;
+                squirelRend.enabled = false;
+                bunnyRend.enabled = true;
+                bunny.transform.position = initialPosition;
                 break;
             case 2:
-                mySprite.sprite = bunny;
+                squirel.transform.position = initialPosition;
+                squirelRend.enabled = true;
+                bunnyRend.enabled = false;
+                bunny.transform.position = offScreenPos;
                 break;
             default:
                 break;
