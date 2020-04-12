@@ -34,16 +34,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-       var currentheight = transform.position.y;
 
-
-        var travel = currentheight - previousheight;
-
-
-
-       var  previousheight = currentheight;
-       */
     }
 
     // regarding animationss
@@ -77,8 +68,8 @@ public class PlayerController : MonoBehaviour
         {
             rayColor = Color.red;
         }
-        Debug.DrawRay(circleCollider2D.bounds.center, Vector2.down * (circleCollider2D.bounds.extents.y + extraHeight), rayColor);
-        Debug.Log(rayCastHit.collider);
+        // Debug.DrawRay(circleCollider2D.bounds.center, Vector2.down * (circleCollider2D.bounds.extents.y + extraHeight), rayColor);
+        // Debug.Log(rayCastHit.collider);
         return rayCastHit.collider != null;
     }
 

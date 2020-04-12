@@ -5,37 +5,64 @@ using UnityEngine;
 public class GameStatus : MonoBehaviour
 {
 
-    public int numLives = 3;
-    public int score = 0;
-    // Start is called before the first frame update
-    void Start()
+    static protected int numLives = 3;
+    static protected int score = 0;
+    static protected int healthScoreCheck = 0; // if 1000 points are made, 1 live extra
+    static protected int hitPoints = 10;
+    
+    
+    public static void AddScore(int s)
     {
-        // load data from the playersprefs, from prev scene or relaoding game
-        score = PlayerPrefs.GetInt("score", 0);
-        numLives = PlayerPrefs.GetInt("lives", 3);
+        score += s;
+        healthScoreCheck += s;
+        if (healthScoreCheck >= 1000)
+        {
+            numLives += 1;
+            healthScoreCheck -= 1000;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public static int GetScore()
     {
+        return score;
+    }
+
+    public static int GetLives()
+    {
+        return numLives;
+    }
+
+    // "health system"
+    public static int GetHealth()
+    {
+        return hitPoints;
+    }
+
+    public static void Damage(int damageAmount)
+    {
+        hitPoints -= damageAmount;
+        if (hitPoints < 0)
+        {
+            hitPoints = 0;
+            numLives -= 1;
+            // dead, lost a life
+            if (numLives <= 0)
+        {
+            // game over
+        } else
+            {
+                hitPoints = 100;
+            }
+        }
+        
         
     }
 
-
-    //scene changes or exit this will be called
-    private void OnDestroy()
+    public static void Heal(int healAmount)
     {
-        // Debug.Log("GameStatus was Destroyed");
-
-        PlayerPrefs.SetInt("score", score);
-        PlayerPrefs.SetInt("lives", numLives);
+        hitPoints += healAmount;
+        if (hitPoints > 100) hitPoints = 100;
     }
-
-    public void AddScore(int s)
-    {
-        score += s;
-    }
-
 
 
     /*

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ScorePanelUpdater : MonoBehaviour
 {
+    public Text scoreText;
+    public Text hitPointsText; 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +18,7 @@ public class ScorePanelUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         GameObject go = GameObject.Find("GameStatus");
         if (go == null)
         {
@@ -23,7 +28,8 @@ public class ScorePanelUpdater : MonoBehaviour
         }
 
         GameStatus gs = go.GetComponent<GameStatus>();
-
-        GetComponent<Text>().text = "   Score: 00" + gs.score + " Lives: 0" + gs.numLives;
+        */
+        scoreText.text = "   Score: 00" + GameStatus.GetScore() + " Lives: 0" + GameStatus.GetLives();
+        hitPointsText.text = "HitPoints: " + GameStatus.GetHealth();
     }
 }
