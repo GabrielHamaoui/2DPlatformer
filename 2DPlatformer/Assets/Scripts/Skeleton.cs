@@ -14,8 +14,10 @@ public class Skeleton : MonoBehaviour
     private bool movingright = true;
 
     public Transform groudDetection;
+    public Transform wallDetection;
     int dmgValue = 5;
 
+    LayerMask groundWallLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class Skeleton : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
         skelyAnim = GetComponent<Animator>();
+        groundWallLayer = LayerMask.GetMask("Ground");
     }
 
     // Update is called once per frame
@@ -45,6 +48,23 @@ public class Skeleton : MonoBehaviour
                 movingright = true;
             }
         }
+
+        RaycastHit2D wallCheck = Physics2D.Raycast(wallDetection.position, Vector2.down, 0.02f, groundWallLayer);
+
+        if (wallCheck.collider == true)
+        {
+            if (movingright == true)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingright = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingright = true;
+            }
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
