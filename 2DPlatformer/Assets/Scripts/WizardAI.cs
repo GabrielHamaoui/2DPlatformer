@@ -19,7 +19,7 @@ public class WizardAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireRate = 2f;
+        fireRate = 3f;
         nextShot = Time.time;
         wizardAnim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -36,9 +36,14 @@ public class WizardAI : MonoBehaviour
     {
         if (Time.time > nextShot)
         {
+            wizardAnim.Play("Wizard_Fire");
             Instantiate(fireball, shootingPoint.position, Quaternion.identity);
-            nextShot = Time.time + fireRate;
+            nextShot = Time.time + fireRate;            
+        } else
+        {
+            wizardAnim.Play("Wizard_Idle");
         }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
