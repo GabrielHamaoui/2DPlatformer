@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 7491704305990430140}
   - component: {fileID: 7491704305990430143}
   - component: {fileID: 7491704305990430137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eagle
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

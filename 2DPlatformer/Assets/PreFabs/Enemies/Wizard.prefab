@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153216941718258754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 6153216942840080947}
   - component: {fileID: 6153216942840080959}
   - component: {fileID: 6153216942840080952}
-  m_Layer: 0
-  m_Name: Wizard 1
+  m_Layer: 9
+  m_Name: Wizard
   m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
