@@ -30,6 +30,6 @@ public class ScorePanelUpdater : MonoBehaviour
         GameStatus gs = go.GetComponent<GameStatus>();
         */
         scoreText.text = "   Score: 00" + GameStatus.GetScore() + " Lives: 0" + GameStatus.GetLives();
-        hitPointsText.text = "HitPoints: " + GameStatus.GetHealth();
+        hitPointsText.text = "Hit Points: " + GameStatus.GetHealth();
     }
 }

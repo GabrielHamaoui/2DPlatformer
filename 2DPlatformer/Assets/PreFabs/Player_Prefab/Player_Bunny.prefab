@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 963706340360401660, guid: 0e7e458b424b6d84282ccc04cce1c9a9,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 963706342218747221, guid: 0e7e458b424b6d84282ccc04cce1c9a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -65,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 963706342218747223, guid: 0e7e458b424b6d84282ccc04cce1c9a9,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player_Bunny
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e7e458b424b6d84282ccc04cce1c9a9, type: 3}
