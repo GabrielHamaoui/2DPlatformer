@@ -14,13 +14,18 @@ public class Ghoul : MonoBehaviour
     private bool movingright = true;
 
     public Transform groudDetection;
+    public Transform wallDetection;
+
     int dmgValue = 25;
+
+    LayerMask groundWallLayer;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
         ghoulAnim = GetComponent<Animator>();
+        groundWallLayer = LayerMask.GetMask("Ground");
     }
 
     private void Update()
@@ -41,6 +46,23 @@ public class Ghoul : MonoBehaviour
                 movingright = true;
             }
         }
+
+        RaycastHit2D wallCheck = Physics2D.Raycast(wallDetection.position, Vector2.down, 0.02f, groundWallLayer);
+
+        if (wallCheck.collider == true)
+        {
+            if (movingright == true)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingright = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingright = true;
+            }
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

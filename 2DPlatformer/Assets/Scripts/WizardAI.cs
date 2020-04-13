@@ -29,8 +29,9 @@ public class WizardAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckIfTimeToShoot();
-    }
+        if (!destroy) {
+            CheckIfTimeToShoot();
+        } }
 
     void CheckIfTimeToShoot()
     {
@@ -46,6 +47,9 @@ public class WizardAI : MonoBehaviour
        
     }
 
+
+    bool destroy = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -53,9 +57,10 @@ public class WizardAI : MonoBehaviour
             // they collide, if player on top, destroy object if not take damage
             if (target.position.y - transform.position.y > 0)
             {
+                destroy = true;
                 wizardAnim.Play("Gothic_Church_Death");
                 Destroy(this.gameObject, 0.5f);
-                GameStatus.AddScore(25);
+                GameStatus.AddScore(200);
             }
             else
             {
