@@ -5,111 +5,82 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    Animator animator;
-    Rigidbody2D rb;
-    SpriteRenderer spriteRend;
+    private Animator myAnimator;
+    private Rigidbody2D rb;
 
-    [SerializeField]
-    private float speed = 8f;
+    public float moveSpeed = 5f;
+    public float jumpHeight = 5f;
+    public bool isGrounded = false;
 
-    [SerializeField]
-    private float jumpVelocity = 8f;
+    private bool facingRight;
 
+    public bool onLadder { get; internal set; }
 
-    [SerializeField]
-    private LayerMask groundLayerMask;
-
-    private CircleCollider2D circleCollider2D;
-
-    // Start is called before the first frame update
     void Start()
     {
-
-        animator = GetComponent<Animator>();
+        facingRight = true;
+        myAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        spriteRend = GetComponent<SpriteRenderer>();
-        circleCollider2D = transform.GetComponent<CircleCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        Jump();
+        float horizontal = Input.GetAxis("Horizontal");
+        Vector3 movement = new Vector3(horizontal, 0f, 0f);
+        transform.position += movement * Time.deltaTime * moveSpeed;
+        Debug.Log( rb.velocity.y+"");
 
+        Flip(horizontal);
+
+        myAnimator.SetFloat("speed", Mathf.Abs(horizontal));
+
+        if (rb.velocity.y == 0)
+        {
+            myAnimator.SetBool("isJumping", false);
+            myAnimator.SetBool("isFalling", false);
+            myAnimator.SetBool("isGrounded", true);
+
+        }
+
+        if (rb.velocity.y > 0)
+        {
+            myAnimator.SetBool("isJumping", true);
+            myAnimator.SetBool("isSkipping", false);
+            myAnimator.SetBool("isGrounded", false);
+        }
+
+        bool isSkip = myAnimator.GetBool("isGrounded");
+
+        if (rb.velocity.y < 0 &&  !isSkip)
+        {
+            myAnimator.SetBool("isJumping", false);
+            myAnimator.SetBool("isFalling", true);
+            myAnimator.SetBool("isGrounded", false);
+        }
     }
 
-    // regarding animationss
-    private void LateUpdate()
+    void Jump()
     {
-        // JUMP
-        if ((IsGrounded() && Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()))
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
-            animator.SetTrigger("takeOf");
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpHeight), ForceMode2D.Impulse);
         }
-        if (rb.velocity.y < 0)
-        {
-            animator.SetBool("isFalling", true);
-        }
-        else
-        {
-            animator.SetBool("isFalling", false);
-            
-        }
+
+
     }
 
-    private bool IsGrounded()
+    void Flip(float horizontal)
     {
-        float extraHeight = 0.01f;
-        RaycastHit2D rayCastHit = Physics2D.CircleCast(circleCollider2D.bounds.center, 0.45f /*radius*/, Vector2.down, circleCollider2D.bounds.extents.y + extraHeight, groundLayerMask);
-        Color rayColor;
-        if (rayCastHit.collider != null)
+        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
         {
-            rayColor = Color.green;
-        } else
-        {
-            rayColor = Color.red;
+            facingRight = !facingRight;
+
+            Vector3 theScale = transform.localScale;
+
+            theScale.x *= -1;
+
+            transform.localScale = theScale;
         }
-        // Debug.DrawRay(circleCollider2D.bounds.center, Vector2.down * (circleCollider2D.bounds.extents.y + extraHeight), rayColor);
-        // Debug.Log(rayCastHit.collider);
-        return rayCastHit.collider != null;
     }
-
-    // fixed timesteps and more accurate for physics
-    private void FixedUpdate()
-    {
-
-
-        // LEFT, RIGHT & IDLE
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-            animator.Play("Player_Run");
-            spriteRend.flipX = true;
-
-        } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-            animator.Play("Player_Run");
-            spriteRend.flipX = false;
-
-        } else
-        {            
-
-            animator.Play("Player_Idle");
-            rb.velocity = new Vector2(0, rb.velocity.y);
-
-        }
-
-        // JUMP
-        if ((IsGrounded() && Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()))
-        {            
-            rb.velocity = Vector2.up * jumpVelocity;
-            // animator.SetTrigger("takeOf");
-        }
-
-       
-
-    }
-
 }
