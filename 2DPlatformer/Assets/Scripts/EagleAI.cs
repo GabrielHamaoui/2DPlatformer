@@ -104,6 +104,7 @@ public class EagleAI : MonoBehaviour
             {
                 eagleAnim.Play("Enemy_Death");
                 Destroy(this.gameObject, 0.5f);
+                GameStatus.AddScore(25);
             }
             else
             {
