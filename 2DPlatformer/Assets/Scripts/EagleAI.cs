@@ -68,36 +68,12 @@ public class EagleAI : MonoBehaviour
         }
     }
 
-    /*
-    void FollowPlayer()
-    {
-        // enemy is left, move right
-        if (transform.position.x < target.position.x)
-        {
-            rb.velocity = new Vector2(moveSpeed, 0);
-            transform.localScale = new Vector2(-1, 1); // could have used spriterenderer, but this changes the object itself much better
-        } else
-        {
-            // move left
-            rb.velocity = new Vector2(-moveSpeed, 0);
-            transform.localScale = new Vector2(1, 1);
-        }
-
-        // if enemy above dropdown
-        if (transform.position.y > target.position.y)
-        {
-            rb.velocity = new Vector2(0, -moveSpeed);
-        }
-
-
-    }
-    */
     
 
     // on collision with player, if not from head, take damage =, i fon head destroy eagle
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.name == "Player_Bunny")
         {
             // they collide, if player on top, destroy object if not take damage
             if (target.position.y - transform.position.y > 0)
