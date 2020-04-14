@@ -15,7 +15,7 @@ public class LadderZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.name == "Player_Bunny")
         {
             thePlayer.onLadder = true;
         }
@@ -23,7 +23,7 @@ public class LadderZone : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.name == "Player_Bunny")
         {
             thePlayer.onLadder = false;
         }
