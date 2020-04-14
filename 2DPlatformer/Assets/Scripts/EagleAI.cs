@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EagleAI : MonoBehaviour
 {
-    GameObject player;
+    GameObject player; // grab player
     Transform target; // player position
 
     [SerializeField]

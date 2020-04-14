@@ -360,7 +360,7 @@ Fine tune movement and animations
 Start the creation of a Character Selection Menu 
 
 3. Need Assistance:
-
+N/A
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -385,12 +385,145 @@ Start the creation of a Character Selection Menu
 08/04/2020 Gabriel:
 
 1. What was done since last scrum:
+Character Selection Menu
+
+2. To do until next scrum:
+Data Persistence for character selection through levels
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+09/04/2020 Jessica:
+
+1. What was done since last scrum:
 
 
 2. To do until next scrum:
 
 
 3. Need Assistance:
+N/A
 
+-----------------------------------------------------------------------------------------------------
+
+09/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Character Persistence through levels
+
+2. To do until next scrum:
+Break
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+10/04/2020 Jessica:
+
+1. What was done since last scrum:
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+N/A
+
+-----------------------------------------------------------------------------------------------------
+
+10/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Took Break
+
+2. To do until next scrum:
+Break
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+11/04/2020 Jessica:
+
+1. What was done since last scrum:
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+N/A
+
+-----------------------------------------------------------------------------------------------------
+
+11/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Took Break
+
+2. To do until next scrum:
+Make Prefabs (enemies, Items, Ui, etc.)
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+12/04/2020 Jessica:
+
+1. What was done since last scrum:
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+N/A
+
+-----------------------------------------------------------------------------------------------------
+
+12/04/2020 Gabriel:
+
+1. What was done since last scrum:
+made enemy prefabs
+made item prefabs
+made some UI prefabs (Score Panel)
+
+2. To do until next scrum:
+Make final touches to game
+populate levels with items and ennemies
+
+3. Need Assistance:
+N/A
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+13/04/2020 Jessica:
+
+1. What was done since last scrum:
+
+
+2. To do until next scrum:
+
+
+3. Need Assistance:
+N/A
+-----------------------------------------------------------------------------------------------------
+
+13/04/2020 Gabriel:
+
+1. What was done since last scrum:
+Populated levels, added some final touches to the game and levels
+
+2. To do until next scrum:
+Create Presentation
+Practice Presentation
+
+3. Need Assistance:
+N/A
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

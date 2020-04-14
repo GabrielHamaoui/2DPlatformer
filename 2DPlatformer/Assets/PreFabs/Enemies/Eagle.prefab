@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agroRange: 10
-  moveSpeed: 5
+  moveSpeed: 4
 --- !u!50 &7491704305990430140
 Rigidbody2D:
   serializedVersion: 4
