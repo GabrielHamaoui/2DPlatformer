@@ -73,5 +73,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Bunny
       objectReference: {fileID: 0}
+    - target: {fileID: 963706342218747223, guid: 0e7e458b424b6d84282ccc04cce1c9a9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e7e458b424b6d84282ccc04cce1c9a9, type: 3}

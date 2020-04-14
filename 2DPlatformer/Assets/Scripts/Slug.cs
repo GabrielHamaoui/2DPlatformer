@@ -74,7 +74,7 @@ public class Slug : MonoBehaviour
             {
                 slugAnim.Play("Enemy_Death");
                 Destroy(this.gameObject, 0.5f);
-                GameStatus.AddScore(25);
+                GameStatus.AddScore(10);
             }
             else
             {
