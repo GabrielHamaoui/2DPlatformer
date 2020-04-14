@@ -398,10 +398,11 @@ N/A
 09/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+- created levels
+- created player prefab
 
 2. To do until next scrum:
-
+Break
 
 3. Need Assistance:
 N/A
@@ -424,10 +425,10 @@ N/A
 10/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+Took Break
 
 2. To do until next scrum:
-
+Break
 
 3. Need Assistance:
 N/A
@@ -450,10 +451,10 @@ N/A
 11/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+Took Break
 
 2. To do until next scrum:
-
+- import level between unity projects
 
 3. Need Assistance:
 N/A
@@ -476,10 +477,12 @@ N/A
 12/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+- imported 3rd level
+- started level creation
 
 2. To do until next scrum:
-
+- complete level creation
+- add climbable surfaces to each level
 
 3. Need Assistance:
 N/A
@@ -505,10 +508,14 @@ N/A
 13/04/2020 Jessica:
 
 1. What was done since last scrum:
-
+- added climbable surfaces
+- added background elements
 
 2. To do until next scrum:
-
+- add foreground elements
+- fix climbable surfaces
+- add camera boundaries
+- complete and practice presentation
 
 3. Need Assistance:
 N/A
