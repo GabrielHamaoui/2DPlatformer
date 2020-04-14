@@ -202,6 +202,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &152933259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2310807685368971338, guid: dc84d1d9701083045a7e7e0342f16cc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2036008060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &333259280
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +244,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 152933259}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.6453724
@@ -262,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333259280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: 0.8361668, z: -10}
+  m_LocalPosition: {x: 0.015755892, y: 0.4130299, z: -10.024414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1475474300}
@@ -527,7 +533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: 0.8361668, z: -10}
+  m_LocalPosition: {x: 0.015755892, y: 0.4130299, z: -10.024414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1317331676}
@@ -7851,7 +7857,7 @@ MonoBehaviour:
   m_ScreenY: 0.59
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.2
-  m_DeadZoneHeight: 0.1
+  m_DeadZoneHeight: 0.09
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.9
