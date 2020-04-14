@@ -27,7 +27,7 @@ public class Slug : MonoBehaviour
         groundWallLayer = LayerMask.GetMask("Ground");
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Translate(Vector2.right * -speed * Time.deltaTime);
 
